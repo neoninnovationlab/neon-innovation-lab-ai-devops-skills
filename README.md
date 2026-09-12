@@ -125,8 +125,13 @@ For engineering teams looking to automate these checks across their CI/CD pipeli
 | **Commercial Team License (Unlimited Seats)** | ❌ | **Included** |
 | **Quarterly AWS & Postgres 17+ Rule Updates** | ❌ | **Included** |
 
-### 👉 [Get the Enterprise Pro Bundle on Gumroad ($19)](https://neoninnovationlab.gumroad.com/l/devops-ai-skills)
+### 👉 [Get the Enterprise Pro Bundle on Gumroad ($19 — All 3 Included)](https://neoninnovationlab.gumroad.com/l/devops-ai-skills)
 *Instant ZIP download • 1-click PayPal & Credit Card Checkout • Multi-Seat Commercial License*
+
+**Or grab individual standalone packages ($9 each):**
+* 💰 [Cloud Cost-Optimization Auditor ($9)](https://neoninnovationlab.gumroad.com/l/cloud-cost-auditor)
+* 🐘 [Postgres Migration & Lock Safety Auditor ($9)](https://neoninnovationlab.gumroad.com/l/postgres-migration-auditor)
+* 🛡️ [OWASP Top 10 & API Security Reviewer ($9)](https://neoninnovationlab.gumroad.com/l/owasp-security-reviewer)
 
 ---
 
