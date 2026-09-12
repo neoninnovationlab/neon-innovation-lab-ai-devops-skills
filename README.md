@@ -108,7 +108,7 @@ This repository contains the **Community Edition** (open-source under MIT), desi
 
 For engineering teams looking to automate these checks across their CI/CD pipelines, we offer the **Enterprise Pro Bundle**:
 
-| Feature | Community Edition (Free) | Enterprise Pro Bundle ($69) |
+| Feature | Community Edition (Free) | Enterprise Pro Bundle ($19) |
 | :--- | :---: | :---: |
 | **All 3 Core `SKILL.md` Engines** | ✅ | ✅ |
 | **Zero-Dependency Python Scanners** | ✅ | ✅ |
@@ -119,7 +119,7 @@ For engineering teams looking to automate these checks across their CI/CD pipeli
 | **Commercial Team License (Unlimited Seats)** | ❌ | **Included** |
 | **Quarterly AWS & Postgres 17+ Rule Updates** | ❌ | **Included** |
 
-### 👉 [Get the Enterprise Pro Bundle on Gumroad ($69)](https://gumroad.com)
+### 👉 [Get the Enterprise Pro Bundle on Gumroad ($19)](https://gumroad.com)
 *Instant ZIP download • 1-click PayPal & Credit Card Checkout • Multi-Seat Commercial License*
 
 ---
