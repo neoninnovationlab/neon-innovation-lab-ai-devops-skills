@@ -125,7 +125,7 @@ For engineering teams looking to automate these checks across their CI/CD pipeli
 | **Commercial Team License (Unlimited Seats)** | ❌ | **Included** |
 | **Quarterly AWS & Postgres 17+ Rule Updates** | ❌ | **Included** |
 
-### 👉 [Get the Enterprise Pro Bundle on Gumroad ($19)](https://neoninnovationlab.gumroad.com/l/nbgkeo)
+### 👉 [Get the Enterprise Pro Bundle on Gumroad ($19)](https://neoninnovationlab.gumroad.com/l/devops-ai-skills)
 *Instant ZIP download • 1-click PayPal & Credit Card Checkout • Multi-Seat Commercial License*
 
 ---
