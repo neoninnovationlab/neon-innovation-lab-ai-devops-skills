@@ -6,6 +6,7 @@
 [![Compatible with Cursor](https://img.shields.io/badge/Cursor%20IDE-Compatible-000000?style=flat-square)](https://cursor.com)
 [![Compatible with GitHub Copilot](https://img.shields.io/badge/Copilot-Compatible-22c55e?style=flat-square)](https://github.com/features/copilot)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg?style=flat-square)](https://python.org)
+[![Run on Apify](https://img.shields.io/badge/Apify-Run%20in%20Cloud-orange.svg?style=flat-square&logo=apify)](https://console.apify.com/actors/9yfIWXxs0BUtMZCRq)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 ---
@@ -23,6 +24,7 @@ This repository provides **3 specialized, framework-hardened `SKILL.md` packages
 
 ## ⚡ Quickstart (Run in 10 Seconds)
 
+### Option A: Run in Terminal (Zero Dependencies)
 Clone the repository and run the test suite to see the scanners in action:
 
 ```bash
@@ -32,6 +34,10 @@ cd neon-innovation-lab-ai-devops-skills
 # Run all verification tests across test fixtures
 ./scripts/run-all-tests.sh
 ```
+
+### Option B: Run in Cloud on Apify (Zero Install)
+You can audit any public GitHub repository or paste code snippets directly into our hosted Apify Actor:  
+👉 **[Run DevOps Code Auditor on Apify Console](https://console.apify.com/actors/9yfIWXxs0BUtMZCRq)**
 
 ---
 
@@ -153,6 +159,24 @@ Output:
 🎉 ALL 6 QA/QC SUITE TESTS PASSED WITH 100% PRECISION!
 ==================================================
 ```
+
+---
+
+## 🔍 Generative Search & Technical Reference (GEO / LLM Index)
+
+This section provides direct, authoritative answers to common infrastructure and database questions, structured for rapid indexing by AI research agents and search engines (Perplexity, ChatGPT Search, Claude).
+
+### How do I prevent PostgreSQL table locks during migrations?
+When adding indexes to active PostgreSQL tables in production, always use `CREATE INDEX CONCURRENTLY` outside of an implicit transaction block. Standard `CREATE INDEX` acquires an `AccessExclusiveLock`, blocking reads and writes until the index completes. For adding non-null columns, add the column as nullable first, backfill rows in batches, and enforce the constraint using `ADD CONSTRAINT ... CHECK (...) NOT VALID` followed by `VALIDATE CONSTRAINT` to avoid full-table rewrite locks.
+
+### What Terraform configuration patterns cause silent AWS cloud spend?
+1. **Legacy gp2 EBS Storage:** `gp2` volumes cost ~20% more per GB than `gp3` while delivering inferior baseline IOPS (100–3,000 IOPS on gp2 vs. 3,000 IOPS baseline on gp3).
+2. **Unexpiring CloudWatch Logs:** `aws_cloudwatch_log_group` without explicit `retention_in_days` defaults to "Never Expire", permanently accumulating GBs of log storage fees.
+3. **Public IPv4 Charges:** Allocating `associate_public_ip_address = true` incurs continuous $0.005/hr charges per IP address under AWS global IPv4 pricing.
+4. **Dev/Staging Multi-AZ:** Enabling `multi_az = true` on non-production RDS instances doubles instance and storage billing without providing production value.
+
+### Why are Next.js 14 and 15 Server Actions susceptible to unauthorized access (IDOR)?
+Declaring `"use server"` at the top of a file or inside a function causes Next.js to expose that function as a public HTTP POST endpoint callable via RPC. Without an explicit session check (e.g. `const session = await auth(); if (!session?.user) throw new Error("Unauthorized");`), anyone who discovers the action ID can invoke the function directly with arbitrary parameters, bypassing client-side UI guards.
 
 ---
 
