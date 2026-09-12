@@ -1,0 +1,21 @@
+# Pre-commit hook configuration for engineering teams
+repos:
+  - repo: local
+    hooks:
+      - id: terraform-cost-scanner
+        name: Terraform Cost Smell Check
+        entry: python3 scripts/tf-cost-scanner.py
+        language: python
+        files: \.tf$
+
+      - id: postgres-lock-analyzer
+        name: Postgres Migration Lock Check
+        entry: python3 scripts/lock-analyzer.py
+        language: python
+        files: \.sql$
+
+      - id: owasp-security-scanner
+        name: OWASP & API Security Check
+        entry: python3 scripts/security-scanner.py
+        language: python
+        files: \.(ts|tsx|js|jsx|py)$

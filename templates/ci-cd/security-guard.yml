@@ -1,0 +1,21 @@
+name: OWASP & API Security Guard
+
+on:
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run OWASP API Security Scanner
+        run: |
+          python3 .github/scripts/security-scanner.py .
